@@ -85,6 +85,81 @@ html,body{
 }
 
 .page2{
-    min-height: 150vh;
+    min-height: 100vh;
     width: 100%;
+    color: #010001;
+    padding: 100px;
+    border-bottom: 2px solid #dadada;
+}
+.page2 h1{
+    font-size: 7vw;
+    font-weight: 300;
+    padding-left: 26px;
+}
+.page2-container{
+    height: 60vh;
+    width:100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.page2left{
+    padding-top: 4px;
+    width:40%;
+    
+}
+.page2left h2{
+    font-size:4vw;
+    font-weight: 300;
+    color:#010001;
+}
+.page2right{
+
+    width:40%
+}
+.page2right p{
+    font-size:normal;
+    color: #010001;
+}
+.page2right button{
+    width: 100%;
+    border-radius: 50px;
+    border: none;
+    padding: 4px 0;
+    background-color: #EDBFFF;
+    color: #111;
+    margin-top: 20px;
+} 
+.page3{
+    min-height: 100vh;
+    width: 100vw;
+
+    position:relative;
+    padding-top: 80px;
+
+}
+.page3 h1{
+    font-size: 6.5vw;
+    color: #111;
+    font-weight: 300;
+    margin-left: 26px;
+}
+.page3-part1{
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between;
+    padding: 10 10 10 10;
+}
+.img1{
+    height: 40%;
+    width: 40%;
+    margin-top: 120px;
+    margin-left: 5%;
+}
+.img2{
+    width: 40%;
+    height: 50%;
+    margin-right:5%;
 }

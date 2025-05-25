@@ -38,7 +38,7 @@ gsap.from(".page1 h1,.page1 h2", {
     delay: 0.3,
     duration: 0.7
 })
-var tl = gsap.timeline({
+let tl = gsap.timeline({
     scrollTrigger: {
         trigger: ".page1 h1",
         scroller: ".main",
@@ -57,3 +57,18 @@ tl.to(".page1 h2", {
 tl.to(".page1 video", {
     width: "95%"
 }, "anim")
+
+
+let tl2 = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".page1 h1",
+        scroller: ".main",
+        // markers:true,
+        start: "top -125%",
+        end: "top -135",
+        scrub: 3
+    }
+})
+tl2.to(".main",{
+  backgroundColor: "#fff"
+})
