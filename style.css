@@ -160,6 +160,24 @@ html,body{
 }
 .img2{
     width: 40%;
-    height: 50%;
+    height: 40%;
+    margin-right:5%;
+
+}
+.page3-part2{
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between;
+    padding: 10 10 10 10;
+}
+.img3{
+    height: 40%;
+    width: 40%;
+    margin-top: 120px;
+    margin-left: 5%;
+}
+.img4{
+    width: 40%;
+    height: 40%;
     margin-right:5%;
 }
