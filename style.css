@@ -135,7 +135,7 @@ html,body{
 .page3{
     min-height: 100vh;
     width: 100vw;
-
+    border-bottom: 2px solid #dadada;
     position:relative;
     padding-top: 80px;
 
