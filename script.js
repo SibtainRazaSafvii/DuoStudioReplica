@@ -24,6 +24,15 @@ ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 ScrollTrigger.refresh();
 }
 init();
+
+
+let crsr = document.querySelector(".cursor")
+let main = document.querySelector(".main")
+main.addEventListener("mousemove",function(dets){
+    crsr.style.left = dets.x + 10+"px"
+    crsr.style.top = dets.y + 10+"px"
+    // it tells the value of cursor in x-y axis 
+})
 gsap.from(".page1 h1,.page1 h2", {
     y: 10,
     rotate: 10,
@@ -62,4 +71,50 @@ let tl2 = gsap.timeline({
 })
 tl2.to(".main",{
   backgroundColor: "#fff"
+})
+var tl3 = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".page1 h1",
+        scroller: ".main",
+        // markers:true,
+        start: "top -280%",
+        end: "top -300%",
+        scrub: 3
+    }
+})
+
+tl3.to(".main",{
+    backgroundColor:"#0F0D0D"
+})
+
+
+var boxes = document.querySelectorAll(".box")
+boxes.forEach(function(elem){
+    elem.addEventListener("mouseenter",function(){
+        var att = elem.getAttribute("data-image")
+        crsr.style.width = "470px"
+        crsr.style.height = "370px"
+        crsr.style.borderRadius = "0"
+        crsr.style.backgroundImage = `url(${att})`
+    })
+    elem.addEventListener("mouseleave",function(){
+        elem.style.backgroundColor = "transparent"
+        crsr.style.width = "20px"
+        crsr.style.height = "20px"
+        crsr.style.borderRadius = "50%"
+        crsr.style.backgroundImage = `none`
+    })
+})
+
+var h4 = document.querySelectorAll("#nav h4")
+var purple = document.querySelector("#purple")
+h4.forEach(function(elem){
+    elem.addEventListener("mouseenter",function(){
+        purple.style.display = "block"   
+        purple.style.opacity = "1"
+    })
+    elem.addEventListener("mouseleave",function(){
+        purple.style.display = "none"   
+        purple.style.opacity = "0"
+    })
 })
