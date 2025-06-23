@@ -118,3 +118,64 @@ h4.forEach(function(elem){
         purple.style.opacity = "0"
     })
 })
+
+// Add GSAP fade-in and hover effects for new cards
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Animate in work cards
+    gsap.from(".work-card", {
+        y: 60,
+        opacity: 0,
+        stagger: 0.15,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+            trigger: ".works-grid",
+            scroller: ".main",
+            start: "top 80%"
+        }
+    });
+    // Animate in expertise cards
+    gsap.from(".expertise-card", {
+        y: 60,
+        opacity: 0,
+        stagger: 0.15,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+            trigger: ".expertise-grid",
+            scroller: ".main",
+            start: "top 80%"
+        }
+    });
+    // Animate in client cards
+    gsap.from(".client-card", {
+        y: 60,
+        opacity: 0,
+        stagger: 0.12,
+        duration: 0.7,
+        ease: "power3.out",
+        scrollTrigger: {
+            trigger: ".clients-grid",
+            scroller: ".main",
+            start: "top 85%"
+        }
+    });
+
+    // Custom cursor hover for cards (like .box before)
+    let crsr = document.querySelector(".cursor");
+    document.querySelectorAll(".work-card, .expertise-card, .client-card").forEach(function(card) {
+        card.addEventListener("mouseenter", function() {
+            crsr.style.width = "60px";
+            crsr.style.height = "60px";
+            crsr.style.backgroundColor = "#EDBFFF";
+            crsr.style.mixBlendMode = "normal";
+        });
+        card.addEventListener("mouseleave", function() {
+            crsr.style.width = "20px";
+            crsr.style.height = "20px";
+            crsr.style.backgroundColor = "#C9D4CB";
+            crsr.style.mixBlendMode = "difference";
+        });
+    });
+});
